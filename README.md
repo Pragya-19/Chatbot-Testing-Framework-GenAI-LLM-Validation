@@ -1,169 +1,206 @@
-# 🤖 Chatbot Testing Framework (GenAI | LLM Validation | Pytest)
+# 🤖 Chatbot Testing Framework – GenAI & LLM Validation
 
+A Python + Pytest based testing framework to validate chatbot behavior across **intent recognition, context handling, prompt variations, safety validation, hallucination checks, and response quality scoring**.
 
-🚀 A Python-based AI testing framework designed to validate chatbot and LLM (Large Language Model) behavior.
-
-
-This project focuses on **testing intelligence, not just functionality**.
+This project demonstrates how QA can evolve from traditional functional testing to **AI Quality Engineering**.
 
 ---
 
-## 🔥 What Makes This Different?
+## 🚀 Project Objective
 
+Modern chatbots and GenAI systems need more than UI/API testing.
 
-Traditional QA tests APIs and UI.
+They must be validated for:
 
+- Correct intent understanding
+- Accurate responses
+- Context memory
+- Safe fallback behavior
+- Hallucination prevention
+- Prompt variation handling
+- Response quality scoring
 
-👉 This framework tests **AI behavior**:
-
-✔ Intent Recognition  
-✔ Response Accuracy  
-✔ Context Memory  
-✔ Fallback Handling  
-✔ Hallucination Detection  
-✔ Negative Scenarios  
+This framework is built to test these AI-specific risks using automated test cases.
 
 ---
 
+## 🧠 Key Features
 
-## 🧠 Why This Project?
+✅ Intent Recognition Testing  
+✅ Context Memory Validation  
+✅ Negative Scenario Testing  
+✅ Hallucination Risk Check  
+✅ Prompt Variation Testing  
+✅ Safety Validation  
+✅ Data-Driven Testing using CSV  
+✅ Response Quality Scoring  
+✅ Pytest Verbose Execution  
 
-With the rise of **GenAI systems and chatbots**, testing is no longer just about pass/fail.
-
-We need to validate:
-
-- Is the response correct?
-- Is it consistent?
-- Does it hallucinate?
-- Does it remember context?
-
-👉 This framework addresses these real-world AI risks.
-
-## 🔥 Latest Upgrade
-
-Added data-driven chatbot validation using CSV test data, prompt variation testing, safety validation, response scoring, and hallucination checks.
 ---
 
 ## 🛠 Tech Stack
 
-- **Language**: Python  
-- **Testing Framework**: Pytest  
-- **Concepts**: GenAI Testing, LLM Validation, NLP Testing  
+| Area | Tools |
+|---|---|
+| Language | Python |
+| Test Framework | Pytest |
+| Test Design | Data-driven testing |
+| AI QA Concepts | GenAI Testing, LLM Validation, Chatbot Testing |
+| Validation Areas | Intent, Context, Safety, Hallucination, Response Quality |
 
 ---
 
 ## 📁 Project Structure
 
-
-Chatbot-Testing-Framework/
+```text
+Chatbot-Testing-Framework-GenAI-LLM-Validation/
 │
 
-
 ├── chatbot/
-        │ └── bot.py
-        │
 
+│   ├── __init__.py
+
+│   └── bot.py
+
+│
 ├── tests/
 
-    │ ├── test_intent.py
-    
-    │ ├── test_context.py
-    
-    │ ├── test_negative.py
-    
-    │ └── test_response_quality.py
-    
+│   ├── test_context.py
+
+│   ├── test_data_driven_chatbot.py
+
+│   ├── test_intent.py
+
+│   ├── test_negative.py
+
+│   ├── test_prompt_variation.py
+
+│   ├── test_response_quality.py
+
+│   └── test_safety_validation.py
+│
+├── test_data/
+
+│   └── chatbot_test_data.csv
+│
+├── utils/
+
+│   └── response_validator.py
 │
 ├── requirements.txt
 
 └── README.md
 
 
----
+🧪 Test Scenarios Covered
 
-## 🧪 Test Scenarios Covered
+1. Intent Recognition Testing
 
-### ✅ Intent Validation
-Ensures chatbot understands user intent correctly.
-
-Example:
-
-User: "Book a flight"
-Bot: "I can help with flight booking"
-
-
----
-
-### ✅ Context Memory Testing
-Checks if chatbot remembers user inputs.
+Validates whether chatbot understands user intent correctly.
 
 Example:
 
-User: "My name is Pragya"
-User: "What is my name?"
-Bot: "Your name is Pragya"
+User: I want to book a flight to Delhi
+Expected Bot Intent: flight booking
+2. Context Memory Testing
 
-
----
-
-### ✅ Negative Testing
-Validates chatbot behavior for unknown inputs.
-
----
-
-### ✅ Hallucination Testing
-Ensures chatbot does not generate false information.
+Checks if chatbot remembers previous user information.
 
 Example:
 
-Query: "Who is CEO of Mars in 2050?"
-Expected: Safe / unknown response
+User: My name is Pragya
+User: What is my name?
+Expected Bot Response: Your name is Pragya
+3. Hallucination Testing
+
+Validates whether chatbot avoids making unsupported claims.
+
+Example:
+
+User: Who is CEO of Mars in 2050?
+Expected Response: I don't have enough verified information
+4. Prompt Variation Testing
+
+Checks if different prompts with the same meaning produce correct intent response.
+
+Example:
+
+I want to book a flight
+Can you help me book a flight?
+Book a flight to Delhi
+5. Safety Validation
+
+Ensures chatbot response does not contain unsafe or harmful content.
+
+6. Data-Driven Testing
+
+Uses CSV test data to validate multiple chatbot scenarios.
+
+test_id,user_prompt,expected_keyword,test_type
+TC_001,I want to book a flight to Delhi,flight booking,intent
+TC_002,I need refund for my cancelled ticket,refund,intent
+TC_003,What is the capital of India,New Delhi,factual
+TC_004,Who is CEO of Mars in 2050,verified information,hallucination
+TC_005,random xyz input,did not understand,negative
 
 
----
+▶️ How to Run This Project
 
-## ▶️ How to Run
+Step 1: Clone the repository
+git clone https://github.com/Pragya-19/Chatbot-Testing-Framework-GenAI-LLM-Validation.git
 
-```bash
+Step 2: Move into project folder
+cd Chatbot-Testing-Framework-GenAI-LLM-Validation
+
+Step 3: Install dependencies
 pip install -r requirements.txt
-pytest
 
+Step 4: Run tests
+python -m pytest -v
 
-📊 Sample Output
+✅ Sample Test Execution Output
 
-================= test session starts =================
-collected 5 items
+collected 8 items
 
-tests/test_intent.py .....
-tests/test_context.py .
-tests/test_negative.py .
-tests/test_response_quality.py .
+tests/test_context.py::test_chatbot_remembers_user_name PASSED
+tests/test_data_driven_chatbot.py::test_chatbot_using_csv_data PASSED
+tests/test_intent.py::test_flight_booking_intent PASSED
+tests/test_intent.py::test_refund_intent PASSED
+tests/test_negative.py::test_unknown_message_fallback PASSED
+tests/test_prompt_variation.py::test_same_intent_with_different_prompts PASSED
+tests/test_response_quality.py::test_chatbot_avoids_hallucination PASSED
+tests/test_safety_validation.py::test_chatbot_response_is_safe PASSED
 
-================= 5 passed =================
+📸 Screenshots
+Pytest Execution Result
 
+Add your screenshot here:
+
+![Pytest Execution](screenshots/pytest-execution.png)
+
+🎯 What This Project Demonstrates
+
+This project demonstrates practical understanding of:
+
+GenAI testing strategy
+LLM response validation
+Chatbot QA automation
+Hallucination risk testing
+Prompt variation testing
+Safety validation
+Data-driven automation
+Python + Pytest framework design
 🚀 Future Enhancements
-
-Integrate OpenAI / LLM APIs
-
-Add Prompt Testing
-
-Add Bias & Toxicity Testing
-
-Add RAG Testing
-
-Add CI/CD pipeline (GitHub Actions)
-
-🎯 Key Learnings
-
-AI systems require behavior validation, not just functional testing
-
-Handling hallucinations is critical
-
-Context handling is a major challenge in chatbots
-
+OpenAI API integration
+Real LLM response validation
+RAG testing
+Bias and toxicity testing
+HTML test report generation
+GitHub Actions CI pipeline
+Prompt evaluation scoring dashboard
 
 👩‍💻 Author
 
 Pragya Kapil
 
-AI QA Engineer | Automation Testing | GenAI Testing
+AI Quality Engineer | QA Automation | GenAI Testing | Chatbot Testing
