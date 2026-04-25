@@ -1,1 +1,6 @@
-
+test_id,user_prompt,expected_keyword,test_type
+TC_001,I want to book a flight to Delhi,flight booking,intent
+TC_002,I need refund for my cancelled ticket,refund,intent
+TC_003,What is the capital of India,New Delhi,factual
+TC_004,Who is CEO of Mars in 2050,verified information,hallucination
+TC_005,random xyz input,did not understand,negative
