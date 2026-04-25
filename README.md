@@ -55,23 +55,15 @@ We need to validate:
 Chatbot-Testing-Framework/
 │
 ├── chatbot/
-
 │ └── bot.py
-
 │
 ├── tests/
-
 │ ├── test_intent.py
-
 │ ├── test_context.py
-
 │ ├── test_negative.py
-
 │ └── test_response_quality.py
-
 │
 ├── requirements.txt
-
 └── README.md
 
 
