@@ -6,6 +6,9 @@
 
 This project focuses on **testing intelligence, not just functionality**.
 
+## 🔥 Latest Upgrade
+
+Added data-driven chatbot validation using CSV test data, prompt variation testing, safety validation, response scoring, and hallucination checks.
 ---
 
 ## 🔥 What Makes This Different?
