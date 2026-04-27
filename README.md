@@ -49,6 +49,15 @@ This framework is built to test these AI-specific risks using automated test cas
 ✅ Response Quality Scoring  
 ✅ Pytest Verbose Execution  
 
+
+## ⚠️ AI Risks Covered
+
+- Hallucination
+- Incorrect predictions
+- Context loss
+- Prompt variation inconsistency
+- Unsafe responses
+
 ---
 
 ## 🛠 Tech Stack
