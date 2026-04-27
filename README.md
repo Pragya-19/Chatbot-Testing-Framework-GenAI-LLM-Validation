@@ -13,6 +13,10 @@ A Python + Pytest based testing framework to validate chatbot behavior across **
 
 This project demonstrates how QA can evolve from traditional functional testing to **AI Quality Engineering**.
 
+⚠️ Note:
+This project uses a rule-based simulation to demonstrate AI testing concepts.
+It is designed to showcase how QA validation works for AI systems such as LLMs and NLP models.
+
 ---
 
 ## 🚀 Project Objective
