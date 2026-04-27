@@ -1,3 +1,11 @@
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Pytest](https://img.shields.io/badge/Pytest-Automation-green)
+![GenAI](https://img.shields.io/badge/GenAI-Testing-purple)
+![LLM](https://img.shields.io/badge/LLM-Validation-orange)
+![Chatbot](https://img.shields.io/badge/Chatbot-Testing-brightgreen)
+![Version](https://img.shields.io/badge/Version-v1.0-success)
+
+
 # 🤖 Chatbot Testing Framework – GenAI & LLM Validation
 
 A Python + Pytest based testing framework to validate chatbot behavior across **intent recognition, context handling, prompt variations, safety validation, hallucination checks, and response quality scoring**.
@@ -86,6 +94,10 @@ Chatbot-Testing-Framework-GenAI-LLM-Validation/
 ├── utils/
 
 │   └── response_validator.py
+
+├── screenshots/
+
+    │   └── pytest-execution.png
 │
 ├── requirements.txt
 
@@ -93,7 +105,7 @@ Chatbot-Testing-Framework-GenAI-LLM-Validation/
 
 ```
 
-🧪 Test Scenarios Covered
+##🧪 Test Scenarios Covered
 
 1. Intent Recognition Testing
 
@@ -163,7 +175,7 @@ TC_004,Who is CEO of Mars in 2050,verified information,hallucination
 TC_005,random xyz input,did not understand,negative
 
 
-▶️ How to Run This Project
+##▶️ How to Run This Project
 
 Step 1: Clone the repository
 
@@ -181,13 +193,13 @@ Step 4: Run tests
 
 python -m pytest -v
 
-📸 Screenshots
+##📸 Screenshots
 Pytest Execution Result
 
 ![Pytest Execution](screenshots/pytest-execution.png)
 
 
-🎯 What This Project Demonstrates
+##🎯 What This Project Demonstrates
 
 This project demonstrates practical understanding of:
 
@@ -209,7 +221,7 @@ Data-driven automation
 
 Python + Pytest framework design
 
-🚀 Future Enhancements
+##🚀 Future Enhancements
 
 OpenAI API integration
 
@@ -225,7 +237,7 @@ GitHub Actions CI pipeline
 
 Prompt evaluation scoring dashboard
 
-👩‍💻 Author
+##👩‍💻 Author
 
 Pragya Kapil
 
