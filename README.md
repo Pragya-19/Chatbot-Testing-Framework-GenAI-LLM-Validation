@@ -501,9 +501,7 @@ Potential extensions include:
 
 ---
 
-# 💬 Interview Positioning
-
-A useful way to describe this project is:
+# 💬 Repo Positioning
 
 > "I created a Pytest-based chatbot QA framework to explore AI-specific testing concerns such as intent recognition, multi-turn context, prompt variations, unsupported-query handling, safety checks and response validation. The current chatbot is deliberately deterministic and rule-based, so the regression suite is repeatable. I use CSV-driven expected outputs, reusable validators and GitHub Actions for CI. I would extend the same test architecture to a real LLM using semantic evaluation, RAG metrics, guardrails and LLM-as-a-Judge."
 
